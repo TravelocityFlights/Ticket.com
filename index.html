@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plane Ticket</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .ticket {
+    width: 80%; /* Reduced width */
+    max-width: 400px; /* Reduced maximum width */
+    margin: 10px auto; /* Reduced margin */
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 18px; /* Reduced font size */
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 6px 10px; /* Reduced padding */
+    border-bottom: 1px solid #ddd;
+    font-size: 14px; /* Reduced font size */
+  }
+  .label {
+    font-weight: bold;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px; /* Reduced font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .barcode {
+    text-align: center;
+    margin-top: 15px; /* Reduced margin */
+  }
+  /* Added CSS for the airline logo */
+  .airline-logo {
+    display: block;
+    margin: 0 auto 15px; /* Adjusted margin */
+    width: 150px; /* Adjusted width */
+  }
+
+  /* Media queries for mobile responsiveness */
+  @media only screen and (max-width: 600px) {
+    .ticket {
+      width: 90%;
+    }
+    .airline-logo {
+      width: 120px; /* Adjusted width */
+    }
+    .barcode img {
+      max-width: 70%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="ticket">
+  <!-- American Airlines logo -->
+  <img class="airline-logo" src="https://i.postimg.cc/CKzxKd2m/airlines-2.jpg" alt="American Airlines Logo">
+
+  <h2>American Airlines Flight Ticket</h2>
+  <table>
+    <tr>
+      <td class="label">Passenger Name:</td>
+      <td>Gianna Richardson</td>
+    </tr>
+    <tr>
+      <td class="label">Departure Date:</td>
+      <td>30th October, 2024</td> <!-- Updated departure date -->
+    </tr>
+    <tr>
+      <td class="label">Departure:</td>
+      <td>Pennsylvania, Philadelphia</td>
+    </tr>
+    <tr>
+      <td class="label">Destination:</td>
+      <td>Houston, Texas</td>
+    </tr>
+    <tr>
+      <td class="label">Check-in Time:</td>
+      <td>9:00 AM</td>
+    </tr>
+    <tr>
+      <td class="label">Departure Time:</td>
+      <td>10:30 AM</td>
+    </tr>
+    <tr>
+      <td class="label">Landing Time:</td>
+      <td>2:00 PM</td>
+    </tr>
+    <tr>
+      <td class="label">Number of Bags:</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td class="label">Seat Number:</td>
+      <td>4A</td>
+    </tr>
+    <tr>
+      <td class="label">Flight Code:</td>
+      <td>VX 303</td>
+    </tr>
+    <tr>
+      <td class="label">Group:</td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td class="label">Gate Number:</td>
+      <td>D2</td>
+    </tr>
+    <tr>
+      <td class="label">Ticket Code:</td>
+      <td colspan="3">EKT : BFTYRYU / 7876554578900</td>
+    </tr>
+  </table>
+  <button class="btn" onclick="printTicket()">Print Ticket</button>
+
+  <!-- Barcode section -->
+  <div class="barcode">
+    <img src="https://i.postimg.cc/HLh1v2Bt/barcode.png" alt="Barcode">
+  </div>
+</div>
+
+<script>
+function printTicket() {
+    window.print();
+}
+</script>
+
+</body>
+</html>
